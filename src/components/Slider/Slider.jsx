@@ -19,7 +19,6 @@ const Slider = ({ slideData }) => {
         loop={true}
         style={{ borderRadius: "12px", overflow: "hidden" }}
       >
-        {/* Slides */}
         {slideData.map((slide) => (
           <SwiperSlide>
             <div className="flex justify-center items-center">
