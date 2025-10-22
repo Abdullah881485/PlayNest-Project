@@ -24,6 +24,87 @@ const Home = () => {
             ))}
           </div>
         </div>
+        <div className="my-20 space-y-5">
+          <h1 className="text-2xl font-semibold">Our Mission</h1>
+          <div className="flex items-center gap-10">
+            <img
+              className="w-6/12 rounded-lg"
+              src="https://i.ibb.co.com/8gNwYbJv/vintage-toy-shelf-with-teddy-bears-classic-figurines-rustic-wooden-setting-529344-15941.jpg"
+              alt="toy shop"
+            />
+            <div>
+              <h2 className="text-2xl font-bold text-[#FF4C60] mb-4">
+                Why Families Love PlayNest
+              </h2>
+              <p className="text-gray-600 max-w-3xl mx-auto mb-10">
+                At PlayNest, we're passionate about making childhood magical and
+                meaningful. Every toy we offer is carefully chosen to ensure
+                safety, spark imagination, and bring smiles to every home. Your
+                happiness matters — from browsing to delivery!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="my-20">
+          <h2 class="text-3xl font-bold text-[#FF4C60] mb-6 text-center">
+            Meet Our Local Sellers
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto mb-10 text-center">
+            We proudly support local toy makers and small businesses. Here are
+            some of our featured sellers:
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer">
+              <img
+                className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+                src="https://i.ibb.co.com/twmK0082/700674.png"
+                alt=""
+              />
+              <h3 class="text-xl font-semibold text-[#4D96FF] mb-1">
+                Rafiq Toys
+              </h3>
+              <p class="text-gray-600 text-sm mb-2">Rafiq’s Wooden Wonders</p>
+              <p class="text-gray-500 text-xs">rafiq@localtoys.com</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer">
+              <img
+                className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+                src="https://i.ibb.co.com/R4ygBp4q/icon-5887126-960-720.webp"
+                alt=""
+              />
+              <h3 class="text-xl font-semibold text-[#4D96FF] mb-1">
+                Nadia Crafts
+              </h3>
+              <p class="text-gray-600 text-sm mb-2">Nadia’s Creative Toys</p>
+              <p class="text-gray-500 text-xs">nadia@localtoys.com</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer">
+              <img
+                className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+                src="https://i.ibb.co.com/BKBKvg9X/1730273.png"
+                alt=""
+              />
+              <h3 class="text-xl font-semibold text-[#4D96FF] mb-1">
+                ToyFun Hub
+              </h3>
+              <p class="text-gray-600 text-sm mb-2">Toys R Us Local</p>
+              <p class="text-gray-500 text-xs">contact@toysruslocal.com</p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer">
+              <img
+                className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
+                src="https://i.ibb.co.com/qF0kr8PH/779159.png"
+                alt=""
+              />
+              <h3 class="text-xl font-semibold text-[#4D96FF] mb-1">
+                Happy Hands
+              </h3>
+              <p class="text-gray-600 text-sm mb-2">Happy Kids Toys</p>
+              <p class="text-gray-500 text-xs">info@happykids.com</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
