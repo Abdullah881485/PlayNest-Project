@@ -3,7 +3,13 @@ import React from "react";
 const MyProfile = () => {
   return (
     <div>
-      <h1>This is My Profile</h1>
+      <div>
+        <h1>My Profile</h1>
+        <form>
+          <input type="text" placeholder="Enter Your Name" />
+          <input type="text" />
+        </form>
+      </div>
     </div>
   );
 };
