@@ -1,5 +1,6 @@
 import React, { use } from "react";
 import { AuthContext } from "../../Provider/AuthContext";
+import Swal from "sweetalert2";
 
 const MyProfile = () => {
   const { user, updateUser, setUser } = use(AuthContext);
@@ -11,6 +12,12 @@ const MyProfile = () => {
     updateUser({ displayName: name, photoURL: picture })
       .then(() => {
         setUser({ ...user, displayName: name, photoURL: picture });
+        Swal.fire({
+          title: "",
+          text: "Your account updated successfully",
+          icon: "success",
+          confirmButtonText: "Close",
+        });
       })
       .catch((error) => {
         console.log(error);
@@ -19,13 +26,14 @@ const MyProfile = () => {
   };
   return (
     <div>
-      <div className="w-[50%] mx-auto my-20">
+      <title>PlayNest | My Profile</title>
+      <div data-aos="zoom-in" className="w-[50%] mx-auto my-20">
         <h1 className="mb-5 text-2xl font-bold text-[#ff6f61]">My Profile</h1>
         <div className="flex items-center gap-5">
           <img
             className="w-18 rounded-full"
             src={`${
-              user
+              user.photoURL
                 ? user.photoURL
                 : "https://static.vecteezy.com/system/resources/previews/000/439/863/original/vector-users-icon.jpg"
             }`}

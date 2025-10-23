@@ -15,7 +15,11 @@ const Purchases = () => {
 
   if (purchased.length === 0) {
     return (
-      <div className="w-10/12 flex flex-col items-center mx-auto my-50 text-center text-gray-500">
+      <div
+        data-aos="fade-up"
+        className="w-10/12 flex flex-col items-center mx-auto my-50 text-center text-gray-500"
+      >
+        <title>PlayNest | Purchase</title>
         <img
           className="w-50"
           src="https://i.ibb.co.com/fdtPcpwm/R.png"
@@ -30,6 +34,7 @@ const Purchases = () => {
   }
   return (
     <div className="w-10/12 mx-auto my-40">
+      <title>PlayNest | Purchase</title>
       {purchased.map((card) => (
         <div key={card.toyId} className="flex flex-col gap-10">
           <div className="w-full my-2 flex justify-between items-center bg-base-200 px-4 py-5 rounded-2xl shadow-md hover:shadow-xl">

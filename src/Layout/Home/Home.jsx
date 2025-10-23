@@ -13,11 +13,12 @@ const Home = () => {
 
   return (
     <div>
+      <title>PlayNest | Home</title>
       <div className=" my-10 w-[85%] mx-auto">
         <div>
           <Slider slideData={slideData}></Slider>
         </div>
-        <div className="my-10 space-y-5">
+        <div data-aos="fade-up" className="my-10 space-y-5">
           <h1 className="text-xl font-semibold">Populer Toys</h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {data.map((card) => (
@@ -25,7 +26,7 @@ const Home = () => {
             ))}
           </div>
         </div>
-        <div className="my-20 space-y-5">
+        <div data-aos="fade-up" className="my-20 space-y-5">
           <h1 className="text-2xl font-semibold">Our Mission</h1>
           <div className="flex items-center gap-10">
             <img
@@ -47,7 +48,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="my-20">
+        <div data-aos="fade-up" className="my-20">
           <h2 className="text-3xl font-bold text-[#FF4C60] mb-6 text-center">
             Meet Our Local Sellers
           </h2>

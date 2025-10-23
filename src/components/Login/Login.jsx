@@ -1,6 +1,7 @@
 import React, { use } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../Provider/AuthContext";
+import Swal from "sweetalert2";
 
 const Login = () => {
   const { signIn, signInWithGoogle } = use(AuthContext);
@@ -17,6 +18,12 @@ const Login = () => {
         console.log(user);
         navigate(`${location.state ? location.state : "/"}`);
         e.target.reset();
+        Swal.fire({
+          title: "",
+          text: "You logged in Successfully",
+          icon: "success",
+          confirmButtonText: "Close",
+        });
       })
       .catch((error) => {
         console.log(error);
@@ -29,7 +36,12 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         // setUser(result.user);
-        alert("Sign In Successfully");
+        Swal.fire({
+          title: "",
+          text: "You logged in Successfully",
+          icon: "success",
+          confirmButtonText: "Close",
+        });
         navigate(`${location.state ? location.state : "/"}`);
       })
       .catch((error) => {
@@ -38,7 +50,8 @@ const Login = () => {
   };
 
   return (
-    <div className="card-body  w-5/12 mx-auto my-20">
+    <div data-aos="zoom-in" className="card-body  w-5/12 mx-auto my-20">
+      <title>PlayNest | Login</title>
       <h1 className="text-2xl font-bold text-center my-4">Login</h1>
       <form onSubmit={handleLogin} className="fieldset">
         <label className="label text-[15px]">Email</label>

@@ -3,6 +3,7 @@ import { Link, NavLink } from "react-router";
 import "./Header.css";
 import logo from "../../assets/3082060.png";
 import { AuthContext } from "../../Provider/AuthContext";
+import Swal from "sweetalert2";
 
 const Header = () => {
   const { user, logOut } = use(AuthContext);
@@ -10,7 +11,12 @@ const Header = () => {
   const handleLogOut = () => {
     logOut()
       .then(() => {
-        alert("You logged out Successfully");
+        Swal.fire({
+          title: "",
+          text: "You logged out Successfully",
+          icon: "success",
+          confirmButtonText: "Close",
+        });
       })
       .catch((err) => {
         console.log(err);

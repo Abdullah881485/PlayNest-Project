@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useLoaderData, useParams } from "react-router";
+import Swal from "sweetalert2";
 
 const ToyDetails = () => {
   const [toyTry, setToyTry] = useState(false);
@@ -8,20 +9,34 @@ const ToyDetails = () => {
   const { id } = useParams();
   const clickId = parseInt(id);
   const clickDetails = toyDetails.find((toy) => toy.toyId === clickId);
-  const handleTryNow = () => {
+  const handleTryNow = (e) => {
+    e.preventDefault();
     const purchase = JSON.parse(localStorage.getItem("purchased")) || [];
     const addCheck = purchase.find((add) => add.toyId === clickId);
     if (addCheck) {
-      alert("toy already added");
-      return;
+      purchase.push(clickDetails);
+      Swal.fire({
+        title: "",
+        text: "Already purchased,Wan't another?",
+        icon: "warning",
+        confirmButtonText: "Close",
+      });
     } else {
       purchase.push(clickDetails);
-      alert("Toy Successfully Purchased");
+      Swal.fire({
+        title: "",
+        text: "Toy Successfully Purchased",
+        icon: "success",
+        confirmButtonText: "Close",
+      });
     }
     localStorage.setItem("purchased", JSON.stringify(purchase));
+    setToyTry(false);
+    // e.target.reset();
   };
   return (
-    <div className="my-10 w-8/12 mx-auto">
+    <div data-aos="zoom-in" className="my-10 w-8/12 mx-auto">
+      <title>PlayNest | Toy Details</title>
       <div className="hero mb-10">
         <div className="hero-content flex-col lg:flex-row gap-10">
           <img
@@ -68,7 +83,10 @@ const ToyDetails = () => {
         </div>
       </div>
       {toyTry && (
-        <div className="w-10/12 mx-auto py-10 border-t-2 border-gray-300">
+        <div
+          data-aos="zoom-in"
+          className="w-10/12 mx-auto py-10 border-t-2 border-gray-300"
+        >
           <h1 className="text-xl font-semibold">Try Now</h1>
           <div className="card-body ">
             <form onSubmit={handleTryNow} className="fieldset">

@@ -1,11 +1,11 @@
-import React, { use, useState } from "react";
+import React, { use } from "react";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../../Provider/AuthContext";
+import Swal from "sweetalert2";
 
 const Register = () => {
   const { createUser, setUser, updateUser, signInWithGoogle } =
     use(AuthContext);
-  const [passError, setPassError] = useState("");
   const navigate = useNavigate();
   const handleRegister = (e) => {
     e.preventDefault();
@@ -13,18 +13,32 @@ const Register = () => {
     const email = e.target.email.value;
     const picture = e.target.picture.value;
     const password = e.target.password.value;
-    setPassError("");
     if (password.length < 6) {
-      setPassError(alert("Password Need to be atleast 6 character or longer"));
+      Swal.fire({
+        title: "Error!",
+        text: "Password need to be atleast 6 digit or longer",
+        icon: "error",
+        confirmButtonText: "Close",
+      });
       return;
     } else if (!/[A-Z]/.test(password)) {
-      setPassError(alert("Must have an Uppercase letter in the password "));
+      Swal.fire({
+        title: "Error!",
+        text: "Must have an Uppercase letter in the password",
+        icon: "error",
+        confirmButtonText: "Close",
+      });
       return;
     } else if (!/[a-z]/.test(password)) {
-      setPassError(alert("Must have a Lowercase letter in the password"));
+      Swal.fire({
+        title: "Error!",
+        text: "Must have an lowercase letter in the password",
+        icon: "error",
+        confirmButtonText: "Close",
+      });
       return;
     } else {
-      setPassError("");
+      ("");
     }
     console.log({ name, email, picture, password });
     createUser(email, password)
@@ -41,12 +55,22 @@ const Register = () => {
             setUser(user);
           });
 
-        alert("Account created Successfully");
+        Swal.fire({
+          title: "",
+          text: "Account Created Successfully",
+          icon: "success",
+          confirmButtonText: "Close",
+        });
         e.target.reset();
       })
       .catch((error) => {
         console.log(error);
-        alert("Email already used");
+        Swal.fire({
+          title: "Error!",
+          text: "You Already Have an Account",
+          icon: "error",
+          confirmButtonText: "Close",
+        });
       });
   };
   const handleGoogleSignIn = () => {
@@ -54,7 +78,12 @@ const Register = () => {
       .then((result) => {
         // console.log(result.user);
         setUser(result.user);
-        alert("account created");
+        Swal.fire({
+          title: "",
+          text: "Your account created successfully",
+          icon: "success",
+          confirmButtonText: "Close",
+        });
         navigate("/");
       })
       .catch((error) => {
@@ -63,7 +92,8 @@ const Register = () => {
   };
 
   return (
-    <div className="card-body  w-5/12 mx-auto my-10">
+    <div data-aos="zoom-in" className="card-body  w-5/12 mx-auto my-10">
+      <title>PlayNest | Register</title>
       <h1 className="text-2xl font-bold text-center my-4">Register</h1>
       <form onSubmit={handleRegister} className="fieldset">
         <label className="label text-[15px]">Name</label>
@@ -99,9 +129,6 @@ const Register = () => {
           required
         />
         <div className="flex flex-col gap-2 mt-1 ">
-          {passError && (
-            <p className="text-[15px] text-blue-500">{passError}</p>
-          )}
           <p className="text-[15px]">
             Already have an account?Please
             <Link to="/login">

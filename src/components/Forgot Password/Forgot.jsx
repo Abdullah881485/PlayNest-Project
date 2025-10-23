@@ -1,5 +1,6 @@
 import React, { use } from "react";
 import { AuthContext } from "../../Provider/AuthContext";
+import Swal from "sweetalert2";
 
 const Forgot = () => {
   const { resetPassword } = use(AuthContext);
@@ -12,14 +13,21 @@ const Forgot = () => {
     resetPassword(email)
       .then((result) => {
         console.log(result);
-        alert("Forgot Password Email Sent");
+        Swal.fire({
+          title: "",
+          text: "Password reset mail sent,check your Mail",
+          icon: "success",
+          confirmButtonText: "Close",
+        });
       })
       .catch((err) => {
         console.log(err);
       });
+    window.location.href = "https://mail.google.com/";
   };
   return (
-    <div className="w-5/12 mx-auto my-40">
+    <div data-aos="zoom-in" className="w-5/12 mx-auto my-40">
+      <title>PlayNest | Forgot Password</title>
       <form onSubmit={handleForgotPassword} className="fieldset">
         <label className="label text-[15px]">Email</label>
         <input
