@@ -5,11 +5,20 @@ import Login from "../components/Login/Login";
 import Register from "../components/Register/Register";
 import MyProfile from "../Layout/MyProfile/MyProfile";
 import Purchases from "../Layout/Purchases/Purchases";
+import ToyDetails from "../Layout/ToyDetails/ToyDetails";
+// import { useState } from "react";
+
+// const [details, setDetails] = useState();
+
+// const handleViewDetails = () => {
+
+// }
 
 const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
+    hydrateFallbackElement: <h1>Loading...</h1>,
     children: [
       {
         index: true,
@@ -31,6 +40,11 @@ const router = createBrowserRouter([
       {
         path: "/purchases",
         Component: Purchases,
+      },
+      {
+        path: "/toyDetails/:id",
+        Component: ToyDetails,
+        loader: () => fetch("/Data/toy.json"),
       },
       {
         path: "/*",
