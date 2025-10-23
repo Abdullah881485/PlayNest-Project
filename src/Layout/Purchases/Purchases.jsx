@@ -29,7 +29,7 @@ const Purchases = () => {
     );
   }
   return (
-    <div className="w-10/12 mx-auto my-20">
+    <div className="w-10/12 mx-auto my-40">
       {purchased.map((card) => (
         <div key={card.toyId} className="flex flex-col gap-10">
           <div className="w-full my-2 flex justify-between items-center bg-base-200 px-4 py-5 rounded-2xl shadow-md hover:shadow-xl">

@@ -1,10 +1,11 @@
 import React, { use } from "react";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../../Provider/AuthContext";
 
 const Login = () => {
   const { signIn } = use(AuthContext);
-
+  const location = useLocation();
+  const navigate = useNavigate();
   const handleLogin = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
@@ -14,10 +15,12 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        navigate(`${location.state ? location.state : "/"}`);
+        e.target.reset();
       })
       .catch((error) => {
         console.log(error);
-        alert("You don't have an account yet");
+        alert("Wrong Email or Password");
       });
   };
 

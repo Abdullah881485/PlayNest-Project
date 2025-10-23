@@ -1,7 +1,8 @@
-import React from "react";
+import React, { Suspense } from "react";
 import Slider from "../../components/Slider/Slider";
 import { useLoaderData } from "react-router";
 import ToyCard from "../../components/ToyCard/ToyCard";
+import Loader from "../../components/Loader/Loader";
 
 const Home = () => {
   const data = useLoaderData();

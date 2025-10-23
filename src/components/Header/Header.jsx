@@ -10,7 +10,7 @@ const Header = () => {
   const handleLogOut = () => {
     logOut()
       .then(() => {
-        alert("You logged out Succesfully");
+        alert("You logged out Successfully");
       })
       .catch((err) => {
         console.log(err);
@@ -73,12 +73,22 @@ const Header = () => {
             <ul className="menu menu-horizontal px-2 font-semibold">{links}</ul>
           </div>
           <div className="navbar-end flex  gap-3 items-center">
-            <div
-              title={user && user.email}
-              className="rounded-full bg-gray-300 p-2 cursor-pointer hover:shadow-xl"
-            >
-              <img className="w-8 " src={logo} alt="" />
-            </div>
+            {user && (
+              <div
+                title={user && user.displayName}
+                className="rounded-full bg-gray-300 cursor-pointer hover:shadow-xl"
+              >
+                <img
+                  className="w-12 rounded-full"
+                  src={`${
+                    user
+                      ? user.photoURL
+                      : "https://static.vecteezy.com/system/resources/previews/000/439/863/original/vector-users-icon.jpg"
+                  }`}
+                  alt=""
+                />
+              </div>
+            )}
             {user ? (
               <button
                 onClick={handleLogOut}

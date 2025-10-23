@@ -7,6 +7,9 @@ import MyProfile from "../Layout/MyProfile/MyProfile";
 import Purchases from "../Layout/Purchases/Purchases";
 import ToyDetails from "../Layout/ToyDetails/ToyDetails";
 import Forgot from "../components/Forgot Password/Forgot";
+import PrivateRoute from "./PrivateRoute";
+import Loader from "../components/Loader/Loader";
+import ErrorPage from "../components/ErrorPage/ErrorPage";
 // import { useState } from "react";
 
 // const [details, setDetails] = useState();
@@ -19,7 +22,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
-    hydrateFallbackElement: <h1>Loading...</h1>,
+    hydrateFallbackElement: <Loader></Loader>,
     children: [
       {
         index: true,
@@ -36,15 +39,27 @@ const router = createBrowserRouter([
       },
       {
         path: "/myProfile",
-        Component: MyProfile,
+        element: (
+          <PrivateRoute>
+            <MyProfile></MyProfile>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/purchases",
-        Component: Purchases,
+        element: (
+          <PrivateRoute>
+            <Purchases></Purchases>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/toyDetails/:id",
-        Component: ToyDetails,
+        element: (
+          <PrivateRoute>
+            <ToyDetails></ToyDetails>
+          </PrivateRoute>
+        ),
         loader: () => fetch("/Data/toy.json"),
       },
       {
@@ -53,7 +68,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/*",
-        element: <h1>error 400000004</h1>,
+        element: <ErrorPage></ErrorPage>,
       },
     ],
   },
