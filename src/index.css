@@ -1,8 +1,14 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap");
 @plugin "daisyui";
 * {
   font-family: "Poppins", "Quicksand", "Nunito", sans-serif;
 }
 @plugin "daisyui" {
   themes: light --default, dark --prefersdark, acid;
+}
+.logo-font {
+  font-family: "DynaPuff", system-ui;
+  font-weight: 900;
+  color: #ff6f61;
 }

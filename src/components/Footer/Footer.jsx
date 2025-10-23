@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="w-10/12 mx-auto py-10 flex flex-col">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-10 pb-5">
           <div>
-            <h2 className="text-2xl font-bold text-[#ff6f61]">PlayNest</h2>
+            <h2 className="text-2xl logo-font">PlayNest</h2>
             <p className="text-gray-500 mt-2 text-sm">
               A joyful toy marketplace for kids — fun, safe, and local.
             </p>
@@ -89,7 +89,7 @@ const Footer = () => {
               <FaTwitter />
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/Abdullah881485"
               target="_blank"
               className="hover:text-black"
             >

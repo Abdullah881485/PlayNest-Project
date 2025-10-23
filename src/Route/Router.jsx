@@ -10,6 +10,8 @@ import Forgot from "../components/Forgot Password/Forgot";
 import PrivateRoute from "./PrivateRoute";
 import Loader from "../components/Loader/Loader";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
+import Terms from "../components/Terms/Terms";
+import Privacy from "../components/Privacy/Privacy";
 // import { useState } from "react";
 
 // const [details, setDetails] = useState();
@@ -65,6 +67,14 @@ const router = createBrowserRouter([
       {
         path: "/forgotPass",
         Component: Forgot,
+      },
+      {
+        path: "/terms",
+        element: <Terms></Terms>,
+      },
+      {
+        path: "/privacy",
+        element: <Privacy></Privacy>,
       },
       {
         path: "/*",
