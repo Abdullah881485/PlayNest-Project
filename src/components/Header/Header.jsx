@@ -1,8 +1,21 @@
-import React from "react";
+import React, { use } from "react";
 import { Link, NavLink } from "react-router";
 import "./Header.css";
 import logo from "../../assets/3082060.png";
+import { AuthContext } from "../../Provider/AuthContext";
+
 const Header = () => {
+  const { user, logOut } = use(AuthContext);
+  // console.log(user);
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        alert("You logged out Succesfully");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
   const links = (
     <>
       <li className="ml-3">
@@ -60,15 +73,27 @@ const Header = () => {
             <ul className="menu menu-horizontal px-2 font-semibold">{links}</ul>
           </div>
           <div className="navbar-end flex  gap-3 items-center">
-            <div className="rounded-full bg-gray-300 p-2">
-              <img className="w-8" src={logo} alt="" />
-            </div>
-            <Link
-              to="/login"
-              className="btn bg-[#ff6f61] text-white rounded-xl"
+            <div
+              title={user && user.email}
+              className="rounded-full bg-gray-300 p-2 cursor-pointer hover:shadow-xl"
             >
-              Sign in
-            </Link>
+              <img className="w-8 " src={logo} alt="" />
+            </div>
+            {user ? (
+              <button
+                onClick={handleLogOut}
+                className="btn bg-[#ff6f61] text-white rounded-xl"
+              >
+                Log Out
+              </button>
+            ) : (
+              <Link
+                to="/login"
+                className="btn bg-[#ff6f61] text-white rounded-xl"
+              >
+                Log In
+              </Link>
+            )}
           </div>
         </div>
       </div>

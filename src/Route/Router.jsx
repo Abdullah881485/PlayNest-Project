@@ -6,6 +6,7 @@ import Register from "../components/Register/Register";
 import MyProfile from "../Layout/MyProfile/MyProfile";
 import Purchases from "../Layout/Purchases/Purchases";
 import ToyDetails from "../Layout/ToyDetails/ToyDetails";
+import Forgot from "../components/Forgot Password/Forgot";
 // import { useState } from "react";
 
 // const [details, setDetails] = useState();
@@ -45,6 +46,10 @@ const router = createBrowserRouter([
         path: "/toyDetails/:id",
         Component: ToyDetails,
         loader: () => fetch("/Data/toy.json"),
+      },
+      {
+        path: "/forgotPass",
+        Component: Forgot,
       },
       {
         path: "/*",
