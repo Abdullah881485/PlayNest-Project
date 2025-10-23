@@ -2,9 +2,21 @@ import React, { use } from "react";
 import { AuthContext } from "../../Provider/AuthContext";
 
 const MyProfile = () => {
-  const { user } = use(AuthContext);
+  const { user, updateUser, setUser } = use(AuthContext);
   // console.log(user.photoURL);
-
+  const handleUpdate = (e) => {
+    e.preventDefault();
+    const name = e.target.name.value;
+    const picture = e.target.photo.value;
+    updateUser({ displayName: name, photoURL: picture })
+      .then(() => {
+        setUser({ ...user, displayName: name, photoURL: picture });
+      })
+      .catch((error) => {
+        console.log(error);
+        setUser(user);
+      });
+  };
   return (
     <div>
       <div className="w-[50%] mx-auto my-20">
@@ -24,20 +36,24 @@ const MyProfile = () => {
             <p className="text-gray-500 text-sm">{`${user.email}`}</p>
           </div>
         </div>
-        <form>
+        <form onSubmit={handleUpdate}>
           <div className="flex flex-col my-3">
             <label className="label">Display Name</label>
             <input
+              name="name"
               type="text"
               className="input w-full"
               placeholder="Enter Your Name"
             />
             <label className="label">Photo URL</label>
-            <input type="text" className="input w-full" />
+            <input name="photo" type="text" className="input w-full" />
             <div>
               <a className="link link-hover">Forgot password?</a>
             </div>
-            <button className="btn w-3/12 mt-4 bg-[#ff6f61] hover:bg-[#4D96FF] rounded-lg font-bold text-white">
+            <button
+              type="submit"
+              className="btn w-3/12 mt-4 bg-[#ff6f61] hover:bg-[#4D96FF] rounded-lg font-bold text-white"
+            >
               Save Changes
             </button>
           </div>
