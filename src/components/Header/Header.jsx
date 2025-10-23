@@ -74,12 +74,13 @@ const Header = () => {
           </div>
           <div className="navbar-end flex  gap-3 items-center">
             {user && (
-              <div
+              <Link
+                to="/myProfile"
                 title={user && user.displayName}
                 className="rounded-full bg-gray-300 cursor-pointer hover:shadow-xl"
               >
                 <img
-                  className="w-12 rounded-full"
+                  className="w-10 rounded-full"
                   src={`${
                     user
                       ? user.photoURL
@@ -87,7 +88,7 @@ const Header = () => {
                   }`}
                   alt=""
                 />
-              </div>
+              </Link>
             )}
             {user ? (
               <button

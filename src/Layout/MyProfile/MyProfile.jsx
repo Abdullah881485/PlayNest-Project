@@ -1,6 +1,10 @@
-import React from "react";
+import React, { use } from "react";
+import { AuthContext } from "../../Provider/AuthContext";
 
 const MyProfile = () => {
+  const { user } = use(AuthContext);
+  // console.log(user.photoURL);
+
   return (
     <div>
       <div className="w-[50%] mx-auto my-20">
@@ -8,12 +12,16 @@ const MyProfile = () => {
         <div className="flex items-center gap-5">
           <img
             className="w-18 rounded-full"
-            src="https://i.ibb.co.com/twmK0082/700674.png"
+            src={`${
+              user
+                ? user.photoURL
+                : "https://static.vecteezy.com/system/resources/previews/000/439/863/original/vector-users-icon.jpg"
+            }`}
             alt=""
           />
           <div className="flex flex-col">
-            <h1 className="text-lg font-bold">MR Ramim</h1>
-            <p className="text-gray-500 text-sm">mdramim@gmail.com</p>
+            <h1 className="text-lg font-bold">{`${user.displayName}`}</h1>
+            <p className="text-gray-500 text-sm">{`${user.email}`}</p>
           </div>
         </div>
         <form>
