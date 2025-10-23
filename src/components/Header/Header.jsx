@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router";
+import { Link, NavLink } from "react-router";
 import "./Header.css";
 import logo from "../../assets/3082060.png";
 const Header = () => {
@@ -63,7 +63,12 @@ const Header = () => {
             <div className="rounded-full bg-gray-300 p-2">
               <img className="w-8" src={logo} alt="" />
             </div>
-            <a className="btn bg-[#ff6f61] text-white rounded-xl">Sign in</a>
+            <Link
+              to="/login"
+              className="btn bg-[#ff6f61] text-white rounded-xl"
+            >
+              Sign in
+            </Link>
           </div>
         </div>
       </div>

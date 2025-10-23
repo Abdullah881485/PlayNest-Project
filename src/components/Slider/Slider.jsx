@@ -32,7 +32,9 @@ const Slider = ({ slideData }) => {
                   <h1 className="text-2xl font-semibold mb-3">
                     {slide.toyName}
                   </h1>
-                  <p>Price: {slide.price} $</p>
+                  <p className="text-blue-500 font-semibold">
+                    Price: {slide.price} $
+                  </p>
                 </div>
               </div>
             </div>
