@@ -1,16 +1,81 @@
-# React + Vite
+PlayNest – Local Kids Toy Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Project Overview
 
-Currently, two official plugins are available:
+PlayNest is an online toy marketplace designed for children and parents to explore, buy, and manage toy collections easily. It provides a secure and friendly platform with features like user authentication, toy management, and detailed product information.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Live Site URL=>
 
-## React Compiler
+Purpose
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+=> The main goal of this project is to build a full-featured React-based toy store web application where users can log in, browse toys, and manage their purchased items.
 
-## Expanding the ESLint configuration
+Key Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+=>User authentication using Firebase (Login, Register, and Logout)
+
+=>Dynamic routes for toy details
+
+=>Private routes for secured pages
+
+=>Add, update, and delete toy options
+
+=>Responsive design for all devices
+
+=>Dynamic title for each page
+
+=>SweetAlert integration for notifications
+
+=>AOS animation or Swiper slider implementation
+
+=>Error handling and user-friendly UI
+
+=>Persistent user information after login (even after reload)
+
+Pages Included
+
+=>Home Page
+
+=>All Toys Page
+
+=>My Toys Page
+
+=>Add a Toy Page
+
+=>Toy Details Page
+
+=>Login & Register Page
+
+=>Terms & Policy Page
+
+=>404 Error Page
+
+Technologies Used
+
+=>Frontend: React, Tailwind CSS, DaisyUI
+
+=>Routing: React Router DOM
+
+=>Authentication: Firebase Authentication
+
+=>Notifications: SweetAlert2
+
+=>Animations/Slider: AOS and Swiper
+
+=>Hosting: Firebase
+
+=>NPM Packages Used
+
+=>react-router-dom
+
+=>firebase
+
+=>sweetalert2
+
+=>aos or swiper
+
+=>react-icons
+
+=>tailwindcss
+
+=>daisyui
