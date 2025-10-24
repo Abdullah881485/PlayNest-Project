@@ -3,12 +3,13 @@ import { AuthContext } from "../../Provider/AuthContext";
 import Swal from "sweetalert2";
 
 const MyProfile = () => {
-  const { user, updateUser, setUser } = use(AuthContext);
+  const { user, updateUser, setUser, setLoading } = use(AuthContext);
   // console.log(user.photoURL);
   const handleUpdate = (e) => {
     e.preventDefault();
     const name = e.target.name.value;
     const picture = e.target.photo.value;
+    setLoading(true);
     updateUser({ displayName: name, photoURL: picture })
       .then(() => {
         setUser({ ...user, displayName: name, photoURL: picture });
@@ -22,7 +23,8 @@ const MyProfile = () => {
       .catch((error) => {
         console.log(error);
         setUser(user);
-      });
+      })
+      .finally(() => setLoading(false));
   };
   return (
     <div>
