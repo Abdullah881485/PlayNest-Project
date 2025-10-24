@@ -22,7 +22,6 @@ const AuthProvider = ({ children }) => {
   // console.log(user);
 
   const createUser = (email, password) => {
-    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
@@ -71,6 +70,8 @@ const AuthProvider = ({ children }) => {
     forgotEmail,
     setForgotEmail,
   };
-  return <AuthContext value={authData}>{children}</AuthContext>;
+  return (
+    <AuthContext.Provider value={authData}>{children}</AuthContext.Provider>
+  );
 };
 export default AuthProvider;

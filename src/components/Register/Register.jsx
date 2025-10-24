@@ -4,7 +4,7 @@ import { AuthContext } from "../../Provider/AuthContext";
 import Swal from "sweetalert2";
 
 const Register = () => {
-  const { createUser, setUser, updateUser, signInWithGoogle } =
+  const { createUser, setUser, updateUser, signInWithGoogle, setLoading } =
     use(AuthContext);
   const navigate = useNavigate();
   const handleRegister = (e) => {
@@ -41,6 +41,7 @@ const Register = () => {
       ("");
     }
     // console.log({ name, email, picture, password });
+    setLoading(true);
     createUser(email, password)
       .then((result) => {
         const user = result.user;
@@ -71,9 +72,11 @@ const Register = () => {
           icon: "error",
           confirmButtonText: "Close",
         });
-      });
+      })
+      .finally(() => setLoading(false));
   };
   const handleGoogleSignIn = () => {
+    setLoading(true);
     signInWithGoogle()
       .then((result) => {
         // console.log(result.user);
@@ -88,7 +91,8 @@ const Register = () => {
       })
       .catch((error) => {
         console.log(error);
-      });
+      })
+      .finally(() => setLoading(false));
   };
 
   return (
