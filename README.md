@@ -64,7 +64,7 @@ Technologies Used
 
 =>Hosting: Firebase
 
-=>NPM Packages Used
+NPM Packages Used
 
 =>react-router-dom
 
