@@ -4,7 +4,7 @@ Project Overview
 
 PlayNest is an online toy marketplace designed for children and parents to explore, buy, and manage toy collections easily. It provides a secure and friendly platform with features like user authentication, toy management, and detailed product information.
 
-Live Site URL=>
+Live Site URL=> http://playnest-project.netlify.app
 
 Purpose
 
