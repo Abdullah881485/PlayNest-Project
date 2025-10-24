@@ -25,6 +25,7 @@ const router = createBrowserRouter([
     path: "/",
     Component: Root,
     hydrateFallbackElement: <Loader></Loader>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         index: true,
@@ -75,10 +76,6 @@ const router = createBrowserRouter([
       {
         path: "/privacy",
         element: <Privacy></Privacy>,
-      },
-      {
-        path: "/*",
-        element: <ErrorPage></ErrorPage>,
       },
     ],
   },

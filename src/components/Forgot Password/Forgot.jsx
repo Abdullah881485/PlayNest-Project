@@ -5,16 +5,17 @@ import Swal from "sweetalert2";
 const Forgot = () => {
   const { resetPassword, forgotEmail } = use(AuthContext);
 
-  console.log(forgotEmail);
+  // console.log(forgotEmail);
 
   const handleForgotPassword = (e) => {
     e.preventDefault();
     const email = e.target.email.value;
-    console.log(email);
+    // console.log(email);
 
     resetPassword(email)
       .then((result) => {
-        console.log(result);
+        const _user = result.user;
+        // console.log(result);
         Swal.fire({
           title: "",
           text: "Password reset mail sent,check your Mail",

@@ -80,6 +80,11 @@ const Header = () => {
           </div>
           <div className="navbar-end flex  gap-3 items-center">
             {user && (
+              <span className="hidden xl:block text-sm font-medium text-gray-700">
+                {user.email}
+              </span>
+            )}
+            {user && (
               <Link
                 to="/myProfile"
                 title={user && user.displayName}

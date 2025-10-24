@@ -11,12 +11,12 @@ const Login = () => {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
-    console.log(email, password);
+    // console.log(email, password);
     setForgotEmail(email);
     signIn(email, password)
       .then((result) => {
-        const user = result.user;
-        console.log(user);
+        const _user = result.user;
+        // console.log(user);
         navigate(`${location.state ? location.state : "/"}`);
         e.target.reset();
         Swal.fire({
@@ -28,14 +28,14 @@ const Login = () => {
       })
       .catch((error) => {
         console.log(error);
-        alert("Wrong Email or Password");
       });
   };
 
   const handleGoogleSignIn = () => {
     signInWithGoogle()
       .then((result) => {
-        console.log(result.user);
+        const _user = result.user;
+
         // setUser(result.user);
         Swal.fire({
           title: "",
