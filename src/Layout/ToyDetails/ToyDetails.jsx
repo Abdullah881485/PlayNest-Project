@@ -35,22 +35,24 @@ const ToyDetails = () => {
     // e.target.reset();
   };
   return (
-    <div data-aos="zoom-in" className="my-10 w-8/12 mx-auto">
+    <div data-aos="zoom-in" className="my-10 w-11/12 md:w-8/12 mx-auto">
       <title>PlayNest | Toy Details</title>
       <div className="hero mb-10">
         <div className="hero-content flex-col lg:flex-row gap-10">
           <img
             src={clickDetails.pictureURL}
             alt={clickDetails.toyName}
-            className="max-w-sm rounded-lg shadow-2xl"
+            className="w-5/6 lg:w-1/2 rounded-lg shadow-2xl"
           />
           <div className="flex flex-col space-y-3">
-            <h1 className="text-4xl font-bold">{clickDetails.toyName}</h1>
+            <h1 className=" text-2xl lg:text-4xl font-bold">
+              {clickDetails.toyName}
+            </h1>
             <h2 className="text-lg font-semibold text-[#ff6f61] ">
               {clickDetails.subCategory}
             </h2>
             <p className="text-gray-500">{clickDetails.description}</p>
-            <h1 className="text-xl font-semibold text-[#4D96FF]">
+            <h1 className="text-lg md:text-xl font-semibold text-[#4D96FF]">
               Price: ${clickDetails.price}
             </h1>
             <div className="flex items-center gap-6 text-gray-700">

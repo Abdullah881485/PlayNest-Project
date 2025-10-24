@@ -19,7 +19,9 @@ const Home = () => {
           <Slider slideData={slideData}></Slider>
         </div>
         <div data-aos="fade-up" className="my-10 space-y-5">
-          <h1 className="text-xl font-semibold">Populer Toys</h1>
+          <h1 className="text-2xl logo-font md:text-3xl font-semibold text-[#ff6f61] text-center">
+            Populer Toys
+          </h1>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {data.map((card) => (
               <ToyCard key={card.toyId} card={card}></ToyCard>
@@ -27,18 +29,20 @@ const Home = () => {
           </div>
         </div>
         <div data-aos="fade-up" className="my-20 space-y-5">
-          <h1 className="text-2xl font-semibold">Our Mission</h1>
-          <div className="flex items-center gap-10">
+          <h1 className="text-3xl font-semibold text-center logo-font text-[#ff6f61]">
+            Our Mission
+          </h1>
+          <div className="flex flex-col md:flex-row items-center gap-10">
             <img
-              className="w-6/12 rounded-lg"
+              className="w-full md:w-6/12 rounded-lg"
               src="https://i.ibb.co.com/8gNwYbJv/vintage-toy-shelf-with-teddy-bears-classic-figurines-rustic-wooden-setting-529344-15941.jpg"
               alt="toy shop"
             />
             <div>
-              <h2 className="text-2xl font-bold text-[#FF4C60] mb-4">
+              <h2 className=" text-center md:text-start text-2xl font-bold text-[#FF4C60] mb-4">
                 Why Families Love PlayNest
               </h2>
-              <p className="text-gray-600 max-w-3xl mx-auto mb-10">
+              <p className="text-gray-600 max-w-3xl mx-auto mb-10 text-center md:text-start">
                 At PlayNest, we're passionate about making childhood magical and
                 meaningful. Every toy we offer is carefully chosen to ensure
                 safety, spark imagination, and bring smiles to every home. Your
@@ -49,7 +53,7 @@ const Home = () => {
         </div>
 
         <div data-aos="fade-up" className="my-20">
-          <h2 className="text-3xl font-bold text-[#FF4C60] mb-6 text-center">
+          <h2 className="text-3xl text-[#FF4C60] mb-6 text-center logo-font">
             Meet Our Local Sellers
           </h2>
           <p className="text-gray-600 max-w-2xl mx-auto mb-10 text-center">

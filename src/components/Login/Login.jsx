@@ -4,7 +4,7 @@ import { AuthContext } from "../../Provider/AuthContext";
 import Swal from "sweetalert2";
 
 const Login = () => {
-  const { signIn, signInWithGoogle } = use(AuthContext);
+  const { signIn, signInWithGoogle, setForgotEmail } = use(AuthContext);
   const location = useLocation();
   const navigate = useNavigate();
   const handleLogin = (e) => {
@@ -12,6 +12,7 @@ const Login = () => {
     const email = e.target.email.value;
     const password = e.target.password.value;
     console.log(email, password);
+    setForgotEmail(email);
     signIn(email, password)
       .then((result) => {
         const user = result.user;
@@ -50,12 +51,18 @@ const Login = () => {
   };
 
   return (
-    <div data-aos="zoom-in" className="card-body  w-5/12 mx-auto my-20">
+    <div
+      data-aos="zoom-in"
+      className="card-body w-full md:w-8/12 lg:w-5/12 mx-auto my-10 md:my-20"
+    >
       <title>PlayNest | Login</title>
-      <h1 className="text-2xl font-bold text-center my-4">Login</h1>
+      <h1 className="text-2xl logo-font text-center my-4 text-[#ff6f61]">
+        Login Your Account
+      </h1>
       <form onSubmit={handleLogin} className="fieldset">
         <label className="label text-[15px]">Email</label>
         <input
+          onChange={(e) => setForgotEmail(e.target.value)}
           name="email"
           type="email"
           className="input w-full"
@@ -88,7 +95,7 @@ const Login = () => {
         >
           Login
         </button>
-        <div className="my-5 flex flex-col justify-center items-center gap-5">
+        <div className=" my-2 md:my-5 flex flex-col justify-center items-center gap-5">
           <p className="text-gray-500 text-[17px] text-center">Or</p>
           <button
             onClick={handleGoogleSignIn}

@@ -29,10 +29,10 @@ const Slider = ({ slideData }) => {
                   className="w-80 object-cover"
                 />
                 <div>
-                  <h1 className="text-2xl font-semibold mb-3">
+                  <h1 className=" text-xl md:text-2xl font-semibold mb-3 text-[#ff6f61]">
                     {slide.toyName}
                   </h1>
-                  <p className="text-blue-500 font-semibold">
+                  <p className="text-blue-500 font-semibold text-[15px] md:text-lg">
                     Price: {slide.price} $
                   </p>
                 </div>

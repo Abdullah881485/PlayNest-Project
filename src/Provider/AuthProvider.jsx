@@ -18,6 +18,7 @@ const googleProvider = new GoogleAuthProvider();
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [forgotEmail, setForgotEmail] = useState("");
   console.log(user);
 
   const createUser = (email, password) => {
@@ -67,6 +68,8 @@ const AuthProvider = ({ children }) => {
     updateUser,
     signInWithGoogle,
     resetPassword,
+    forgotEmail,
+    setForgotEmail,
   };
   return <AuthContext value={authData}>{children}</AuthContext>;
 };

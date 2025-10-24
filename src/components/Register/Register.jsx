@@ -92,9 +92,14 @@ const Register = () => {
   };
 
   return (
-    <div data-aos="zoom-in" className="card-body  w-5/12 mx-auto my-10">
+    <div
+      data-aos="zoom-in"
+      className="card-body w-full md:w-8/12 lg:w-5/12 mx-auto my-10"
+    >
       <title>PlayNest | Register</title>
-      <h1 className="text-2xl font-bold text-center my-4">Register</h1>
+      <h1 className="text-2xl  logo-font text-center my-4 text-[#ff6f61]">
+        Register Your Account
+      </h1>
       <form onSubmit={handleRegister} className="fieldset">
         <label className="label text-[15px]">Name</label>
         <input

@@ -39,8 +39,8 @@ const Header = () => {
   return (
     <nav>
       <div className=" bg-base-100 shadow-sm">
-        <div className="navbar w-[90%] mx-auto">
-          <div className="navbar-start">
+        <div className="navbar w-[98%] md:w-[90%] mx-auto">
+          <div className="navbar-start ">
             <div className="dropdown">
               <div
                 tabIndex={0}
@@ -65,14 +65,14 @@ const Header = () => {
               </div>
               <ul
                 tabIndex="-1"
-                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow font-medium"
+                className="menu  dropdown-content bg-base-200 rounded-box z-2 mt-3 min-w-[300px] p-2 shadow font-semibold"
               >
                 {links}
               </ul>
             </div>
             <div className="flex gap-2 justify-center items-center">
-              <img className="w-14" src={logo} alt="" />
-              <a className="logo-font text-3xl">PlayNest</a>
+              <img className="w-8 md:w-14" src={logo} alt="" />
+              <a className="logo-font text-lg md:text-3xl">PlayNest</a>
             </div>
           </div>
           <div className="navbar-center hidden lg:flex">
@@ -86,7 +86,7 @@ const Header = () => {
                 className="rounded-full bg-gray-300 cursor-pointer hover:shadow-xl"
               >
                 <img
-                  className="w-10 rounded-full"
+                  className=" w-7 md:w-10 rounded-full"
                   src={`${
                     user
                       ? user.photoURL
@@ -99,14 +99,14 @@ const Header = () => {
             {user ? (
               <button
                 onClick={handleLogOut}
-                className="btn bg-[#ff6f61] text-white rounded-xl"
+                className="btn  btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-lg bg-[#ff6f61] text-white rounded-md md:rounded-xl"
               >
                 Log Out
               </button>
             ) : (
               <Link
                 to="/login"
-                className="btn bg-[#ff6f61] text-white rounded-xl"
+                className="btn  btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-lg bg-[#ff6f61] text-white rounded-md md:rounded-xl"
               >
                 Log In
               </Link>

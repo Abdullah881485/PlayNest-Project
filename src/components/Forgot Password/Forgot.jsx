@@ -3,7 +3,9 @@ import { AuthContext } from "../../Provider/AuthContext";
 import Swal from "sweetalert2";
 
 const Forgot = () => {
-  const { resetPassword } = use(AuthContext);
+  const { resetPassword, forgotEmail } = use(AuthContext);
+
+  console.log(forgotEmail);
 
   const handleForgotPassword = (e) => {
     e.preventDefault();
@@ -26,11 +28,18 @@ const Forgot = () => {
     window.location.href = "https://mail.google.com/";
   };
   return (
-    <div data-aos="zoom-in" className="w-5/12 mx-auto my-40">
+    <div
+      data-aos="zoom-in"
+      className=" w-11/12 md:w-8/12 lg:w-5/12 mx-auto my-10 md:my-40"
+    >
       <title>PlayNest | Forgot Password</title>
       <form onSubmit={handleForgotPassword} className="fieldset">
+        <h1 className="text-2xl logo-font text-center my-4 text-[#ff6f61]">
+          Enter Your Email
+        </h1>
         <label className="label text-[15px]">Email</label>
         <input
+          defaultValue={forgotEmail}
           name="email"
           type="email"
           className="input w-full"
