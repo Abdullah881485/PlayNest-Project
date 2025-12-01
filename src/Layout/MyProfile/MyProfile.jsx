@@ -52,11 +52,15 @@ const MyProfile = () => {
             <input
               name="name"
               type="text"
-              className="input w-full placeholder:text-sm md:placeholder:text-[16px] "
+              className="input w-full placeholder:text-sm md:placeholder:text-[16px] rounded-lg "
               placeholder="Enter Your Name"
             />
             <label className="label text-sm md:text-lg">Photo URL</label>
-            <input name="photo" type="text" className="input w-full" />
+            <input
+              name="photo"
+              type="text"
+              className="input w-full rounded-lg"
+            />
 
             <button
               type="submit"

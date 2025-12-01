@@ -1,10 +1,12 @@
-import { useState } from "react";
+import { use, useState } from "react";
 import { useLoaderData, useParams } from "react-router";
 import Swal from "sweetalert2";
+import PrivateRoute from "../../Route/PrivateRoute";
+import { AuthContext } from "../../Provider/AuthContext";
 
 const ToyDetails = () => {
   const [toyTry, setToyTry] = useState(false);
-
+  const { user } = use(AuthContext);
   const toyDetails = useLoaderData();
   const { id } = useParams();
   const clickId = parseInt(id);
@@ -77,7 +79,7 @@ const ToyDetails = () => {
 
             <button
               onClick={() => setToyTry(!toyTry)}
-              className="btn bg-[#ff6f61] hover:bg-[#4D96FF]  font-bold text-white"
+              className="btn bg-[#ff6f61] hover:bg-[#4D96FF]  font-bold text-white rounded-lg"
             >
               Try Now
             </button>
@@ -85,34 +87,38 @@ const ToyDetails = () => {
         </div>
       </div>
       {toyTry && (
-        <div
-          data-aos="zoom-in"
-          className="w-10/12 mx-auto py-10 border-t-2 border-gray-300"
-        >
-          <h1 className="text-xl font-semibold">Try Now</h1>
-          <div className="card-body ">
-            <form onSubmit={handleTryNow} className="fieldset">
-              <label className="label text-[15px]">Name</label>
-              <input
-                type="text"
-                className="input w-full"
-                placeholder="Enter Your Name"
-                required
-              />
-              <label className="label text-[15px] ">Email</label>
-              <input
-                type="email"
-                className="input w-full"
-                placeholder="Enter Your Email"
-                required
-              />
+        <PrivateRoute>
+          <div
+            data-aos="zoom-in"
+            className="w-10/12 mx-auto py-10 border-t-2 border-gray-300"
+          >
+            <h1 className="text-xl font-semibold text-[#ff6f61]">Try Now</h1>
+            <div className="card-body ">
+              <form onSubmit={handleTryNow} className="fieldset">
+                <label className="label text-[15px]">Name</label>
+                <input
+                  type="text"
+                  className="input w-full rounded-lg"
+                  defaultValue={user?.displayName || ""}
+                  placeholder="Enter Your Name"
+                  required
+                />
+                <label className="label text-[15px] ">Email</label>
+                <input
+                  type="email"
+                  defaultValue={user?.email || ""}
+                  className="input w-full rounded-lg"
+                  placeholder="Enter Your Email"
+                  required
+                />
 
-              <button className="btn mt-4 bg-[#ff6f61] hover:bg-[#4D96FF]  font-bold text-white">
-                Try Now
-              </button>
-            </form>
+                <button className="btn mt-4 bg-[#ff6f61] hover:bg-[#4D96FF]  font-bold text-white rounded-lg">
+                  Try Now
+                </button>
+              </form>
+            </div>
           </div>
-        </div>
+        </PrivateRoute>
       )}
     </div>
   );

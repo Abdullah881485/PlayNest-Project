@@ -3,6 +3,7 @@ import Slider from "../../components/Slider/Slider";
 import { useLoaderData } from "react-router";
 import ToyCard from "../../components/ToyCard/ToyCard";
 import Loader from "../../components/Loader/Loader";
+import HowPlayNestWorks from "../../components/HowItWorks/HowItWorks";
 
 const Home = () => {
   const data = useLoaderData();
@@ -15,14 +16,14 @@ const Home = () => {
     <div>
       <title>PlayNest | Home</title>
       <div className=" my-10 w-[85%] mx-auto">
-        <div>
+        <div className="w-full ">
           <Slider slideData={slideData}></Slider>
         </div>
         <div data-aos="fade-up" className="my-10 space-y-5">
           <h1 className="text-2xl logo-font md:text-3xl font-semibold text-[#ff6f61] text-center">
             Populer Toys
           </h1>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
             {data.map((card) => (
               <ToyCard key={card.toyId} card={card}></ToyCard>
             ))}
@@ -39,7 +40,7 @@ const Home = () => {
               alt="toy shop"
             />
             <div>
-              <h2 className=" text-center md:text-start text-2xl font-bold text-[#FF4C60] mb-4">
+              <h2 className=" text-center md:text-start text-2xl font-bold text-[#ff6f61] mb-4">
                 Why Families Love PlayNest
               </h2>
               <p className="text-gray-600 max-w-3xl mx-auto mb-10 text-center md:text-start">
@@ -51,6 +52,7 @@ const Home = () => {
             </div>
           </div>
         </div>
+        <HowPlayNestWorks></HowPlayNestWorks>
 
         <div data-aos="fade-up" className="my-20">
           <h2 className="text-3xl text-[#FF4C60] mb-6 text-center logo-font">

@@ -8,7 +8,14 @@ import "swiper/css/pagination";
 
 const Slider = ({ slideData }) => {
   return (
-    <div style={{ width: "90%", margin: "auto", marginTop: "20px" }}>
+    <div
+      style={{
+        width: "100%",
+        height: "400px",
+        margin: "auto",
+        marginTop: "20px",
+      }}
+    >
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={20}

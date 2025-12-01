@@ -11,7 +11,9 @@ const ToyCard = ({ card }) => {
       />
 
       <div className="px-4 pt-2">
-        <h2 className="card-title text-start text-[#ff6f61]">{card.toyName}</h2>
+        <h2 className="card-title h-10 text-start text-[#ff6f61]">
+          {card.toyName}
+        </h2>
         <p className="text-sm font-medium text-gray-600 ">{card.sellerName}</p>
         <p className="text-lg font-bold text-[#4D96FF] ">
           Price : {card.price} $

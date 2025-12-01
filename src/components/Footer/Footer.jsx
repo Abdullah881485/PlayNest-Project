@@ -1,20 +1,18 @@
 import React from "react";
 import { Link } from "react-router";
-import {
-  FaFacebook,
-  FaInstagram,
-  FaTwitter,
-  FaGithub,
-  FaGlobe,
-} from "react-icons/fa";
-
+import { FaFacebook, FaInstagram, FaTwitter, FaGithub } from "react-icons/fa";
+import logo from "../../assets/3082060.png";
 const Footer = () => {
   return (
     <footer className="bg-gray-50 border-t border-gray-200 mt-20">
       <div className="w-10/12 mx-auto py-10 flex flex-col">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-10 pb-5">
           <div>
-            <h2 className="text-2xl logo-font">PlayNest</h2>
+            <div className="flex items-center gap-2">
+              <img className="w-8 md:w-10" src={logo} alt="" />
+              <h2 className="text-2xl logo-font">PlayNest</h2>
+            </div>
+
             <p className="text-gray-500 mt-2 text-sm">
               A joyful toy marketplace for kids — fun, safe, and local.
             </p>
@@ -25,10 +23,9 @@ const Footer = () => {
               <h3 className="font-semibold mb-3 text-gray-800">ABOUT</h3>
               <ul className="space-y-2">
                 <li>
-                  <a href="#">PlayNest</a>
-                </li>
-                <li>
-                  <a href="#">Our Sellers</a>
+                  <a href="https://www.motherandbaby.com/reviews/education-toys/baby-play-nest/">
+                    PlayNest
+                  </a>
                 </li>
               </ul>
             </div>
@@ -94,9 +91,6 @@ const Footer = () => {
               className="hover:text-black"
             >
               <FaGithub />
-            </a>
-            <a href="#" className="hover:text-gray-800">
-              <FaGlobe />
             </a>
           </div>
         </div>

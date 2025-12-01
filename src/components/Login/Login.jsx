@@ -65,14 +65,14 @@ const Login = () => {
           onChange={(e) => setForgotEmail(e.target.value)}
           name="email"
           type="email"
-          className="input w-full"
+          className="input w-full rounded-lg"
           placeholder="Email"
         />
         <label className="label text-[15px]">Password</label>
         <input
           name="password"
           type="password"
-          className="input w-full"
+          className="input w-full rounded-lg"
           placeholder="Password"
         />
         <div className="flex flex-col gap-2 mt-1 ">
@@ -91,7 +91,7 @@ const Login = () => {
         </div>
         <button
           type="submit"
-          className="btn bg-[#ff6f61] hover:bg-[#4D96FF] font-bold text-white mt-4"
+          className="btn bg-[#ff6f61] hover:bg-[#4D96FF] font-bold text-white mt-4 rounded-lg"
         >
           Login
         </button>
@@ -99,7 +99,7 @@ const Login = () => {
           <p className="text-gray-500 text-[17px] text-center">Or</p>
           <button
             onClick={handleGoogleSignIn}
-            className="btn bg-white text-black border-[#e5e5e5] w-full"
+            className="btn bg-white text-black border-[#e5e5e5] w-full rounded-lg"
           >
             <svg
               aria-label="Google logo"

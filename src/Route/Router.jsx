@@ -12,6 +12,9 @@ import Loader from "../components/Loader/Loader";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
 import Terms from "../components/Terms/Terms";
 import Privacy from "../components/Privacy/Privacy";
+import AllToys from "../Layout/AllToys/AllToys";
+import FeedbackPage from "../Layout/Feedback/Feedback";
+import ContactPage from "../Layout/Contact/Contact";
 // import { useState } from "react";
 
 // const [details, setDetails] = useState();
@@ -31,6 +34,11 @@ const router = createBrowserRouter([
         index: true,
         Component: Home,
         loader: () => fetch("/Data/toy.json"),
+      },
+      {
+        path: "/allToys",
+        Component: AllToys,
+        loader: () => fetch("/Data/alltoy.json"),
       },
       {
         path: "/login",
@@ -57,12 +65,13 @@ const router = createBrowserRouter([
         ),
       },
       {
+        path: "/allToys/toyDetails/:id",
+        element: <ToyDetails></ToyDetails>,
+        loader: () => fetch("/Data/alltoy.json"),
+      },
+      {
         path: "/toyDetails/:id",
-        element: (
-          <PrivateRoute>
-            <ToyDetails></ToyDetails>
-          </PrivateRoute>
-        ),
+        element: <ToyDetails></ToyDetails>,
         loader: () => fetch("/Data/toy.json"),
       },
       {
@@ -76,6 +85,14 @@ const router = createBrowserRouter([
       {
         path: "/privacy",
         element: <Privacy></Privacy>,
+      },
+      {
+        path: "/feedback",
+        Component: FeedbackPage,
+      },
+      {
+        path: "/contact",
+        Component: ContactPage,
       },
     ],
   },

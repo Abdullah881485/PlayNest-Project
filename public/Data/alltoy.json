@@ -1,0 +1,98 @@
+[
+  {
+    "toyId": 1,
+    "toyName": "Lego Classic Bricks",
+    "sellerName": "Toys R Us Local",
+    "sellerEmail": "contact@toysruslocal.com",
+    "price": 49.99,
+    "rating": 4.7,
+    "availableQuantity": 75,
+    "description": "A timeless set of colorful Lego bricks that encourages creativity and problem-solving. Kids can build anything they imagine, from houses to vehicles.",
+    "pictureURL": "https://i.ibb.co.com/0jtBvkSn/214-2144457-lego-bricks-set.png",
+    "subCategory": "Building Blocks"
+  },
+  {
+    "toyId": 2,
+    "toyName": "Barbie Dreamhouse",
+    "sellerName": "Happy Kids Store",
+    "sellerEmail": "sales@happykids.com",
+    "price": 129.99,
+    "rating": 4.8,
+    "availableQuantity": 20,
+    "description": "A luxury three-story Barbie Dreamhouse with furniture, lights, and sounds for endless pretend play fun.",
+    "pictureURL": "https://i.ibb.co.com/HfqLMWXK/barbie-dreamhouse-png-knd93-p1bq24n4vel0h7qv.png",
+    "subCategory": "Dolls & Playsets"
+  },
+  {
+    "toyId": 3,
+    "toyName": "Hot Wheels Mega Track Set",
+    "sellerName": "Speedy Toys BD",
+    "sellerEmail": "support@speedytoysbd.com",
+    "price": 59.99,
+    "rating": 4.5,
+    "availableQuantity": 50,
+    "description": "An exciting track set for Hot Wheels cars with loops, jumps, and crash zones to boost creativity and fun.",
+    "pictureURL": "https://i.ibb.co.com/vCN0B03F/6230710cv13d.jpg",
+    "subCategory": "Vehicles"
+  },
+  {
+    "toyId": 4,
+    "toyName": "RC Monster Truck",
+    "sellerName": "TechToy Zone",
+    "sellerEmail": "info@techtoyzone.com",
+    "price": 69.99,
+    "rating": 4.6,
+    "availableQuantity": 40,
+    "description": "A rugged RC monster truck with 4x4 power and shock absorption, perfect for off-road adventures.",
+    "pictureURL": "https://i.ibb.co.com/mFbwSDpg/17-177836-color-coordinated-controller-toyrific-monster-smash-ups-remote.png",
+    "subCategory": "Remote Control Toys"
+  },
+  {
+    "toyId": 5,
+    "toyName": "Stuffed Teddy Bear",
+    "sellerName": "CuddleLand",
+    "sellerEmail": "hello@cuddleland.com",
+    "price": 24.99,
+    "rating": 4.9,
+    "availableQuantity": 90,
+    "description": "A soft and huggable teddy bear made of premium plush material, safe and comforting for all ages.",
+    "pictureURL": "https://i.ibb.co.com/3m5FVhr4/R.png",
+    "subCategory": "Soft Toys"
+  },
+  {
+    "toyId": 6,
+    "toyName": "Nerf Elite Blaster",
+    "sellerName": "BattleZone Toys",
+    "sellerEmail": "contact@battlezone.com",
+    "price": 39.99,
+    "rating": 4.4,
+    "availableQuantity": 60,
+    "description": "A powerful Nerf blaster with foam darts and an ergonomic design for epic indoor and outdoor battles.",
+    "pictureURL": "https://i.ibb.co.com/zw6J6NS/08b6fe9bec38c766a6f2ffb24350e652.png",
+    "subCategory": "Action Toys"
+  },
+  {
+    "toyId": 7,
+    "toyName": "Play-Doh Creative Set",
+    "sellerName": "FunCraft Hub",
+    "sellerEmail": "shop@funcrafthub.com",
+    "price": 29.99,
+    "rating": 4.6,
+    "availableQuantity": 85,
+    "description": "A colorful Play-Doh set with molds, tools, and accessories to spark imagination and creativity.",
+    "pictureURL": "https://i.ibb.co.com/B5TKG8VN/87-870053-playdoh-clipart.png",
+    "subCategory": "Creative Toys"
+  },
+  {
+    "toyId": 8,
+    "toyName": "Rubik's Cube 3x3",
+    "sellerName": "Brainy Toys",
+    "sellerEmail": "support@brainytoys.com",
+    "price": 12.99,
+    "rating": 4.8,
+    "availableQuantity": 100,
+    "description": "The classic Rubik’s Cube puzzle that enhances memory, focus, and problem-solving skills in kids and adults.",
+    "pictureURL": "https://i.ibb.co.com/6RKMGc1Y/rubik-cube-PNG23.png",
+    "subCategory": "Puzzles"
+  }
+]

@@ -109,7 +109,7 @@ const Register = () => {
         <input
           name="name"
           type="text"
-          className="input w-full"
+          className="input w-full rounded-lg"
           placeholder="Enter Your Name"
           required
         />
@@ -117,7 +117,7 @@ const Register = () => {
         <input
           name="email"
           type="email"
-          className="input w-full"
+          className="input w-full rounded-lg"
           placeholder="Email"
           required
         />
@@ -125,7 +125,7 @@ const Register = () => {
         <input
           name="picture"
           type="text"
-          className="input w-full"
+          className="input w-full rounded-lg"
           placeholder="Enter Your Picture Link"
           required
         />
@@ -133,7 +133,7 @@ const Register = () => {
         <input
           name="password"
           type="password"
-          className="input w-full"
+          className="input w-full rounded-lg"
           placeholder="Password"
           required
         />
@@ -147,7 +147,7 @@ const Register = () => {
         </div>
         <button
           type="submit"
-          className="btn bg-[#ff6f61] hover:bg-[#4D96FF]  font-bold text-white mt-4"
+          className="btn bg-[#ff6f61] hover:bg-[#4D96FF] rounded-lg  font-bold text-white mt-4"
         >
           Register
         </button>
@@ -155,7 +155,7 @@ const Register = () => {
           <p className="text-gray-500 text-[17px] text-center">Or</p>
           <button
             onClick={handleGoogleSignIn}
-            className="btn bg-white text-black border-[#e5e5e5] w-full"
+            className="btn bg-white text-black border-[#e5e5e5] w-full rounded-lg"
           >
             <svg
               aria-label="Google logo"
