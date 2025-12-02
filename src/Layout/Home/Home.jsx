@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
 import Slider from "../../components/Slider/Slider";
-import { useLoaderData } from "react-router";
+import { Link, useLoaderData } from "react-router";
 import ToyCard from "../../components/ToyCard/ToyCard";
 import Loader from "../../components/Loader/Loader";
 import HowPlayNestWorks from "../../components/HowItWorks/HowItWorks";
@@ -28,6 +28,14 @@ const Home = () => {
               <ToyCard key={card.toyId} card={card}></ToyCard>
             ))}
           </div>
+          <div className="flex justify-center">
+            <Link
+              to="/allToys"
+              className="shine-btn bg-[#ff6f61] text-white font-semibold px-8 py-2 rounded-lg cursor-pointer hover:bg-[#4D96FF]  transition-colors"
+            >
+              Load More
+            </Link>
+          </div>
         </div>
         <div data-aos="fade-up" className="my-20 space-y-5">
           <h1 className="text-3xl font-semibold text-center logo-font text-[#ff6f61]">
@@ -54,7 +62,7 @@ const Home = () => {
         </div>
         <HowPlayNestWorks></HowPlayNestWorks>
 
-        <div data-aos="fade-up" className="my-20">
+        <div className="my-20">
           <h2 className="text-3xl text-[#FF4C60] mb-6 text-center logo-font">
             Meet Our Local Sellers
           </h2>
@@ -63,7 +71,10 @@ const Home = () => {
             some of our featured sellers:
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer">
+            <div
+              data-aos="fade-up"
+              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer"
+            >
               <img
                 className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
                 src="https://i.ibb.co.com/twmK0082/700674.png"
@@ -77,7 +88,10 @@ const Home = () => {
               </p>
               <p className="text-gray-500 text-xs">rafiq@localtoys.com</p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer">
+            <div
+              data-aos="fade-up"
+              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer"
+            >
               <img
                 className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
                 src="https://i.ibb.co.com/R4ygBp4q/icon-5887126-960-720.webp"
@@ -91,7 +105,10 @@ const Home = () => {
               </p>
               <p className="text-gray-500 text-xs">nadia@localtoys.com</p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer">
+            <div
+              data-aos="fade-up"
+              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer"
+            >
               <img
                 className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
                 src="https://i.ibb.co.com/BKBKvg9X/1730273.png"
@@ -103,7 +120,10 @@ const Home = () => {
               <p className="text-gray-600 text-sm mb-2">Toys R Us Local</p>
               <p className="text-gray-500 text-xs">contact@toysruslocal.com</p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer">
+            <div
+              data-aos="fade-up"
+              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all cursor-pointer"
+            >
               <img
                 className="w-24 h-24 rounded-full mx-auto mb-4 object-cover"
                 src="https://i.ibb.co.com/qF0kr8PH/779159.png"

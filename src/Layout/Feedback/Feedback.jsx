@@ -57,7 +57,7 @@ export default function FeedbackPage() {
 
         <button
           type="submit"
-          className="w-full py-3 bg-[#ff6f61] text-white rounded-lg font-semibold hover:bg-[#4D96FF] cursor-pointer transition"
+          className="w-full py-3 shine-btn bg-[#ff6f61] text-white rounded-lg font-semibold hover:bg-[#4D96FF] cursor-pointer transition"
         >
           Submit Feedback
         </button>

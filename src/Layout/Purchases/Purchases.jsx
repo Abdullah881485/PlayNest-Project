@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { PiListMagnifyingGlass } from "react-icons/pi";
+import { RiDeleteBinLine } from "react-icons/ri";
+import { Link } from "react-router";
 
 const Purchases = () => {
   const [purchased, setPurchased] = useState([]);
@@ -49,12 +52,15 @@ const Purchases = () => {
                 <p className="text-blue-500">{card.price}</p>
               </div>
             </div>
-            <div>
+            <div className="flex items-center gap-3">
+              <Link className="cursor-pointer" to={`toyDetails/${card.toyId}`}>
+                <PiListMagnifyingGlass size={24} />
+              </Link>
               <h1
                 onClick={() => handleCancel(card.toyId)}
                 className="cursor-pointer"
               >
-                ❌
+                <RiDeleteBinLine size={24} />
               </h1>
             </div>
           </div>

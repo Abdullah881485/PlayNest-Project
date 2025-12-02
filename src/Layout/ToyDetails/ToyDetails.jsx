@@ -79,7 +79,7 @@ const ToyDetails = () => {
 
             <button
               onClick={() => setToyTry(!toyTry)}
-              className="btn bg-[#ff6f61] hover:bg-[#4D96FF]  font-bold text-white rounded-lg"
+              className="btn shine-btn bg-[#ff6f61] hover:bg-[#4D96FF]  font-bold text-white rounded-lg"
             >
               Try Now
             </button>
@@ -112,7 +112,7 @@ const ToyDetails = () => {
                   required
                 />
 
-                <button className="btn mt-4 bg-[#ff6f61] hover:bg-[#4D96FF]  font-bold text-white rounded-lg">
+                <button className="btn mt-4 shine-btn bg-[#ff6f61] hover:bg-[#4D96FF]  font-bold text-white rounded-lg">
                   Try Now
                 </button>
               </form>

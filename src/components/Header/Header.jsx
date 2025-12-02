@@ -124,7 +124,7 @@ const Header = () => {
                       </Link>
                       <button
                         onClick={handleLogOut}
-                        className=" text-white rounded-lg bg-[#ff6f61] hover:bg-[#4D96FF] font-bold cursor-pointer py-1.5 px-7 btn-sm  w-full text-center mt-2 "
+                        className=" text-white shine-btn rounded-lg bg-[#ff6f61] hover:bg-[#4D96FF] font-bold cursor-pointer py-1.5 px-7 btn-sm  w-full text-center mt-2 "
                       >
                         Log Out
                       </button>
@@ -135,9 +135,9 @@ const Header = () => {
             ) : (
               <Link
                 to="/login"
-                className="btn  btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-lg bg-[#ff6f61] text-white rounded-md md:rounded-xl"
+                className="shine-btn bg-[#ff6f61] text-white font-semibold px-4 py-2 text-xs md:text-sm rounded-lg cursor-pointer hover:bg-[#4D96FF]  transition-colors"
               >
-                Log In
+                Sign In
               </Link>
             )}
           </div>

@@ -109,7 +109,7 @@ const Register = () => {
         <input
           name="name"
           type="text"
-          className="input w-full rounded-lg"
+          className="input w-full border border-gray-400 focus:border focus:border-[#ff6f61] rounded-lg focus:outline-none"
           placeholder="Enter Your Name"
           required
         />
@@ -117,7 +117,7 @@ const Register = () => {
         <input
           name="email"
           type="email"
-          className="input w-full rounded-lg"
+          className="input w-full border border-gray-400 focus:border focus:border-[#ff6f61] rounded-lg focus:outline-none"
           placeholder="Email"
           required
         />
@@ -125,7 +125,7 @@ const Register = () => {
         <input
           name="picture"
           type="text"
-          className="input w-full rounded-lg"
+          className="input w-full border border-gray-400 focus:border focus:border-[#ff6f61] rounded-lg focus:outline-none"
           placeholder="Enter Your Picture Link"
           required
         />
@@ -133,7 +133,7 @@ const Register = () => {
         <input
           name="password"
           type="password"
-          className="input w-full rounded-lg"
+          className="input w-full border border-gray-400 focus:border focus:border-[#ff6f61] rounded-lg focus:outline-none"
           placeholder="Password"
           required
         />
@@ -147,12 +147,12 @@ const Register = () => {
         </div>
         <button
           type="submit"
-          className="btn bg-[#ff6f61] hover:bg-[#4D96FF] rounded-lg  font-bold text-white mt-4"
+          className="btn shine-btn bg-[#ff6f61] hover:bg-[#4D96FF] rounded-lg  font-bold text-white mt-4"
         >
           Register
         </button>
-        <div className="my-5 flex flex-col justify-center items-center gap-5">
-          <p className="text-gray-500 text-[17px] text-center">Or</p>
+        <div className="flex flex-col justify-center items-center">
+          <p className="text-gray-500 text-[17px] text-center my-2">Or</p>
           <button
             onClick={handleGoogleSignIn}
             className="btn bg-white text-black border-[#e5e5e5] w-full rounded-lg"

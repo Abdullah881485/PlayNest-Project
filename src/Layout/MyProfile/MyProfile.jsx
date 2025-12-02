@@ -64,7 +64,7 @@ const MyProfile = () => {
 
             <button
               type="submit"
-              className="btn w-6/12 md:w-5/12 lg:w-4/12 xl:w-3/12 mt-4 bg-[#ff6f61] hover:bg-[#4D96FF] rounded-lg font-bold text-white"
+              className="shine-btn btn w-6/12 md:w-5/12 lg:w-4/12 xl:w-3/12 mt-4 bg-[#ff6f61] hover:bg-[#4D96FF] rounded-lg font-bold text-white"
             >
               Save Changes
             </button>
